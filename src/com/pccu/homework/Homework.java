@@ -7,20 +7,21 @@ public class Homework {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		FileReader FileReader = null;
 		FileReader reader = null;
-		FileWriter writer = null;
-		try {
+		FileWriter writer = null;			
+		try {			
 			reader = new FileReader("src/abstract1.txt");
 			writer = new FileWriter("src/clonedabstract1.txt");
 			int flag = 0;
 			while ((flag = reader.read()) != -1) {
 				writer.write(flag);
-			}
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		} finally {
+			}			
+		} catch (FileNotFoundException e) {			
+			e.printStackTrace();			
+		} catch (IOException e) {			
+			e.printStackTrace();			
+		} finally {			
 			if (writer != null) {
 				try {
 					writer.close();
@@ -34,9 +35,8 @@ public class Homework {
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
-			}
-		}
-		
+			}			
+		}		
 	}
 }
 
